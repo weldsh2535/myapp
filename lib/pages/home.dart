@@ -12,13 +12,24 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Home"),
+        title: const Row(
+          children: [
+            Text("Welcome back!"),
+            Spacer(),
+            Icon(Icons.search),
+            Icon(Icons.notifications_outlined)
+          ],
+        ),
       ),
       body: const Padding(
-        padding: EdgeInsets.all(8.0),
-        child: Column(
+        padding: EdgeInsets.only(left:10.0,top:0),
+        child: Row(
           children: [
-            Text("Home Pages")
+            Icon(Icons.location_on_outlined),
+            SizedBox(width: 2),
+            Text("deliver to",style: TextStyle(fontWeight: FontWeight.normal),),
+            const SizedBox(width: 2),
+            Text("Addis Ababa",style: TextStyle(fontWeight: FontWeight.bold),)
           ],
         ),
       ),
